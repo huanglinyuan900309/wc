@@ -1,0 +1,91 @@
+@charset "utf-8";
+/**
+    *@Description:
+    *@Author: huanglinyuan
+    *@Update: 2016-03-24  
+**/
+@-webkit-keyframes warning-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1em 0;
+  }
+}
+@-moz-keyframes warning-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1em 0;
+  }
+}
+@keyframes warning-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1em 0;
+  }
+}
+body, html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: radial-gradient(circle, #628bf1, #416dda);
+}
+.logo{
+	width:100%;
+	text-align: center;
+	margin-top:40%;
+}
+ .logo img{
+ 	width:1.8rem;
+ }
+ .banquan{
+ 	text-align: center;
+ 	font-size:12px;
+ 	color:#a7c0ff;
+ 	position: absolute;
+ 	bottom:4%;
+ 	left:10%;
+ 	right:10%;
+ }
+ .warning {
+  position: relative;
+  background-color: #416dda;
+  border: 1px solid #779DFB;
+  border-radius: 10px;
+  box-shadow:0.0rem 0.2rem 0.8rem #2c56bf;
+  background-size: 0.5em 0.5em;
+  background-image:linear-gradient(-45deg, transparent 0em, transparent 0.16em, #89d7fd 0.17em, #89d7fd 0.32em, transparent 0.33em, transparent 0.49em, #89d7fd 0.51em);
+  -webkit-animation: warning-animation 750ms infinite linear;
+  -moz-animation: warning-animation 750ms infinite linear;
+  animation: warning-animation 750ms infinite linear;
+}
+.warning:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #89D7FD, rgba(181, 236, 253, 0.6) 15%, transparent 60%, #779dfb);
+}
+/*.container {
+  max-width: 640rem;
+  margin: 300px auto 0;
+}*/
+.container .warning {
+  height: 0.2rem;
+  margin: 1rem;
+}
